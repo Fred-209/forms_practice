@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>your page title goes here</title>
+    <meta charset="utf-8" />
+
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+  
+      }
+
+      fieldset {
+        border: none;
+        /* padding: 0; */
+      }
+
+      dl {
+        margin-left: 10px
+        padding: 0;
+      }
+
+      dt {
+        outline: 1px solid blue;
+      }
+
+      dd {
+        margin-left: 0;
+        outline: 1px solid red;
+      }
+
+    #state {
+      display: block;
+      /* margin-left: 0px; */
+    }
+
+    
+    </style>
+  </head>
+  <body>
+    <form action="#" method="post">
+      <fieldset>
+
+        <dl>
+          <dt>
+            <label for="first_name">
+              First Name
+            </label>
+          </dt>
+          <dd><input type="text" name="first_name" id="first_name" /></dd>
+        </dl>
+
+        <dl>
+          <dt>
+            <label for="last_name">
+              Last Name
+            </label>
+          </dt>
+          <dd><input type="text" name="last_name" id="last_name" /></dd>
+        </dl>
+
+        <dl>
+          <dt>
+            <label for="email">
+              Email Address
+            </label>
+          </dt>
+          <dd>
+            <input type="email" name="email" id="email" placeholder="e.g. fred@launchschool.com" size=40px; />
+          </dd>
+        </dl>
+
+        <dl>
+          <dt>
+            <label for="city">
+              City
+            </label>
+          </dt>
+          <dd><input type="text" name="city" id="city" /></dd>
+        </dl>
+
+        <div id="state">
+          <label for="state">State</label>
+            <select name="state" id="state">
+              <option>AK</option>
+              <option>AL</option>
+              <option>AR</option>
+              <option>AZ</option>
+              <option>CA</option>
+              <option>CO</option>
+              <option>CT</option>
+              <option>DC</option>
+              <option>DE</option>
+              <option>FL</option>
+              <option>GA</option>
+              <option>HI</option>
+              <option>IA</option>
+              <option>ID</option>
+              <option>IL</option>
+              <option>IN</option>
+              <option>KS</option>
+              <option>KY</option>
+              <option>LA</option>
+              <option>MA</option>
+              <option>MD</option>
+              <option>ME</option>
+              <option>MI</option>
+              <option>MN</option>
+              <option>MO</option>
+              <option>MS</option>
+              <option>MT</option>
+              <option>NC</option>
+              <option>ND</option>
+              <option>NE</option>
+              <option>NH</option>
+              <option>NJ</option>
+              <option>NM</option>
+              <option>NV</option>
+              <option>NY</option>
+              <option>OH</option>
+              <option>OK</option>
+              <option>OR</option>
+              <option>PA</option>
+              <option>RI</option>
+              <option>SC</option>
+              <option>SD</option>
+              <option>TN</option>
+              <option>TX</option>
+              <option>UT</option>
+              <option>VA</option>
+              <option>VT</option>
+              <option>WA</option>
+              <option>WI</option>
+              <option>WV</option>
+              <option>WY</option>
+            </select>
+        </div>
+
+        <dl>
+          <dt>
+            <label for="zipcode">
+              Zipcode
+            </label>
+          </dt>
+          <dd><input type="number" name="zipcode" id="zipcode" pattern="[0-9]{5}" placeholder="e.g. 85747"/></dd>
+        </dl>
+
+      </fieldset>
+
+      
+
+    </form>
+  </body>
+</html>
