@@ -3,61 +3,23 @@
   <head>
     <title>Contact Form</title>
     <meta charset="utf-8" />
-
-    <style>
-      html, body {
-        margin: 0;
-        padding: 0;
-        background-color: cyan;
-  
-      }
-
-      fieldset {
-        border: none;
-        /* padding: 0; */
-      }
-
-      dl {
-        margin-left: 10px
-        padding: 0;
-      }
-
-      dt {
-      }
-
-      dd {
-        margin-left: 0;
-      }
-
-    #state {
-      display: block;
-      /* margin-left: 0px; */
-    }
-
-    .favorite_colors li {
-      list-style: none;
-    }
-
-    .technologies {
-      list-style: none;
-    }
-
-    </style>
+    <link rel="stylesheet" href="main.css" />
+    
   </head>
   <body>
     <form action="#" method="post">
       <fieldset>
 
-        <dl>
+        <dl class ="partial one_half left">
           <dt>
             <label for="first_name">
               First Name
             </label>
           </dt>
           <dd><input type="text" name="first_name" id="first_name" /></dd>
-        </dl>
+        </dl><!--
 
-        <dl>
+        --><dl class="partial one_half right">
           <dt>
             <label for="last_name">
               Last Name
@@ -77,81 +39,80 @@
           </dd>
         </dl>
 
-        <dl>
-          <dt>
-            <label for="city">
-              City
-            </label>
-          </dt>
-          <dd><input type="text" name="city" id="city" /></dd>
-        </dl>
-
-        <div id="state">
-          <label for="state">State</label>
-            <select name="state" id="state">
-              <option>AK</option>
-              <option>AL</option>
-              <option>AR</option>
-              <option>AZ</option>
-              <option>CA</option>
-              <option>CO</option>
-              <option>CT</option>
-              <option>DC</option>
-              <option>DE</option>
-              <option>FL</option>
-              <option>GA</option>
-              <option>HI</option>
-              <option>IA</option>
-              <option>ID</option>
-              <option>IL</option>
-              <option>IN</option>
-              <option>KS</option>
-              <option>KY</option>
-              <option>LA</option>
-              <option>MA</option>
-              <option>MD</option>
-              <option>ME</option>
-              <option>MI</option>
-              <option>MN</option>
-              <option>MO</option>
-              <option>MS</option>
-              <option>MT</option>
-              <option>NC</option>
-              <option>ND</option>
-              <option>NE</option>
-              <option>NH</option>
-              <option>NJ</option>
-              <option>NM</option>
-              <option>NV</option>
-              <option>NY</option>
-              <option>OH</option>
-              <option>OK</option>
-              <option>OR</option>
-              <option>PA</option>
-              <option>RI</option>
-              <option>SC</option>
-              <option>SD</option>
-              <option>TN</option>
-              <option>TX</option>
-              <option>UT</option>
-              <option>VA</option>
-              <option>VT</option>
-              <option>WA</option>
-              <option>WI</option>
-              <option>WV</option>
-              <option>WY</option>
-            </select>
-        </div>
-
-        <dl>
-          <dt>
-            <label for="zipcode">
-              Zipcode
-            </label>
-          </dt>
-          <dd><input type="number" name="zipcode" id="zipcode" pattern="[0-9]{5}" placeholder="e.g. 85747"/></dd>
-        </dl>
-
+        <section>
+          <dl class="partial one_half left">
+            <dt>
+              <label for="city">
+                City
+              </label>
+            </dt>
+            <dd><input type="text" name="city" id="city" /></dd>
+          </dl><!--
+          --><div id="state_selector" class="partial one_tenth both">
+            <label for="state">State</label>
+              <select name="state" id="state">
+                <option>AK</option>
+                <option>AL</option>
+                <option>AR</option>
+                <option>AZ</option>
+                <option>CA</option>
+                <option>CO</option>
+                <option>CT</option>
+                <option>DC</option>
+                <option>DE</option>
+                <option>FL</option>
+                <option>GA</option>
+                <option>HI</option>
+                <option>IA</option>
+                <option>ID</option>
+                <option>IL</option>
+                <option>IN</option>
+                <option>KS</option>
+                <option>KY</option>
+                <option>LA</option>
+                <option>MA</option>
+                <option>MD</option>
+                <option>ME</option>
+                <option>MI</option>
+                <option>MN</option>
+                <option>MO</option>
+                <option>MS</option>
+                <option>MT</option>
+                <option>NC</option>
+                <option>ND</option>
+                <option>NE</option>
+                <option>NH</option>
+                <option>NJ</option>
+                <option>NM</option>
+                <option>NV</option>
+                <option>NY</option>
+                <option>OH</option>
+                <option>OK</option>
+                <option>OR</option>
+                <option>PA</option>
+                <option>RI</option>
+                <option>SC</option>
+                <option>SD</option>
+                <option>TN</option>
+                <option>TX</option>
+                <option>UT</option>
+                <option>VA</option>
+                <option>VT</option>
+                <option>WA</option>
+                <option>WI</option>
+                <option>WV</option>
+                <option>WY</option>
+              </select>
+          </div><!--
+          --><dl class="partial four_tenths right">
+            <dt>
+              <label for="zipcode">
+                Zipcode
+              </label>
+            </dt>
+            <dd><input type="number" name="zipcode" id="zipcode" pattern="[0-9]{5}" placeholder="e.g. 85747"/></dd>
+          </dl>
+        </section>
       </fieldset>
 
       <fieldset>
@@ -209,35 +170,35 @@
 
           <li>
             <label>
-              <input type ="checkbox" name="technology" value="HTML" required>
+              <input type ="checkbox" name="html" value="HTML" required>
               HTML
             </label>
           </li>
 
           <li>
             <label>
-              <input type ="checkbox" name="technology" value="CSS" required>
+              <input type ="checkbox" name="css" value="CSS" required>
               CSS
             </label>
           </li>
 
           <li>
             <label>
-              <input type ="checkbox" name="technology" value="JavaScript" required>
+              <input type ="checkbox" name="javascript" value="JavaScript" required>
               JavaScript
             </label>
           </li>
 
           <li>
             <label>
-              <input type ="checkbox" name="technology" value="Ruby" required>
+              <input type ="checkbox" name="ruby" value="Ruby" required>
               Ruby
             </label>
           </li>
 
           <li>
             <label>
-              <input type ="checkbox" name="technology" value="Rails" required>
+              <input type ="checkbox" name="rails" value="Rails" required>
               Rails
             </label>
           </li>
