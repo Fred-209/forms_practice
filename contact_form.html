@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>your page title goes here</title>
+    <title>Contact Form</title>
     <meta charset="utf-8" />
 
     <style>
       html, body {
         margin: 0;
         padding: 0;
+        background-color: cyan;
   
       }
 
@@ -22,12 +23,10 @@
       }
 
       dt {
-        outline: 1px solid blue;
       }
 
       dd {
         margin-left: 0;
-        outline: 1px solid red;
       }
 
     #state {
@@ -35,7 +34,14 @@
       /* margin-left: 0px; */
     }
 
-    
+    .favorite_colors li {
+      list-style: none;
+    }
+
+    .technologies {
+      list-style: none;
+    }
+
     </style>
   </head>
   <body>
@@ -148,7 +154,107 @@
 
       </fieldset>
 
-      
+      <fieldset>
+        <h3>Which of these colors do you like best?<h3>
+        <ul class="favorite_colors">
+
+          <li>
+            <label>
+              <input type="radio" name="color" value="red" checked required/>
+              Red
+            </label>
+          </li>
+
+          <li>
+            <label>
+              <input type="radio" name="color" value="blue"  required/>
+              Blue
+            </label>
+          </li>
+
+          <li>
+            <label>
+              <input type="radio" name="color" value="green" required/>
+              Green
+            </label>
+          </li>
+
+          <li>
+            <label>
+              <input type="radio" name="color" value="yellow"  required/>
+              Yellow
+            </label>
+          </li>
+
+          <li>
+            <label>
+              <input type="radio" name="color" value="orange"  required/>
+              Orange
+            </label>
+          </li>
+
+          <li>
+            <label>
+              <input type="radio" name="color" value="purple"  required/>
+              Purple
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <h3>Which web technologies do you want to learn?</h3>
+
+        <ul class="technologies">
+
+          <li>
+            <label>
+              <input type ="checkbox" name="technology" value="HTML" required>
+              HTML
+            </label>
+          </li>
+
+          <li>
+            <label>
+              <input type ="checkbox" name="technology" value="CSS" required>
+              CSS
+            </label>
+          </li>
+
+          <li>
+            <label>
+              <input type ="checkbox" name="technology" value="JavaScript" required>
+              JavaScript
+            </label>
+          </li>
+
+          <li>
+            <label>
+              <input type ="checkbox" name="technology" value="Ruby" required>
+              Ruby
+            </label>
+          </li>
+
+          <li>
+            <label>
+              <input type ="checkbox" name="technology" value="Rails" required>
+              Rails
+            </label>
+          </li>
+
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <label for="comments">Comments</label>
+        <textarea name="comments" id="comments" rows="6" cols="80"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <input type="hidden" value="2022-08-19" name="timestamp" />
+        <input type="submit" value="Send" />
+        <input type="reset" />
+      </fieldset>
 
     </form>
   </body>
